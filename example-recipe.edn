@@ -1,0 +1,73 @@
+{:yudane-loaf
+ #:recipe{:name "Whole Wheat Sandwich Loaf",
+          :base-ingredient #:ingredient{:id :flour, :quantity 450, :unit "g"},
+          :ingredients
+          {:salt #:ingredient{:name "Salt", :ratio 0.017777777777777778},
+           :oil
+           #:ingredient{:name "Oil",
+                        :ratio 0.05555555555555555,
+                        :notes "I used olive oil."},
+           :fresh-yeast
+           #:ingredient{:name "Fresh Yeast", :ratio 0.03333333333333333},
+           :egg-yolks #:ingredient{:name "Egg Yolks", :quantity 2, :unit ""},
+           :egg
+           #:ingredient{:name "Whole Egg",
+                        :quantity 1,
+                        :scale? false,
+                        :unit "",
+                        :notes "For brushing."},
+           :flour #:ingredient{:name "Whole Wheat Flour", :ratio 1, :notes ""},
+           :instant-yeast
+           #:ingredient{:name "Instant Dry Yeast",
+                        :ratio 0.011111111111111112},
+           :sugar #:ingredient{:name "Sugar", :ratio 0.05555555555555555},
+           :water #:ingredient{:name "Water", :ratio 0.6666666666666666},
+           :active-dry-yeast
+           #:ingredient{:name "Active Dry Yeast",
+                        :ratio 0.013333333333333334}},
+          :parts
+          {:yudane
+           {:recipe/name "Yudane",
+            :recipe/ingredients
+            {:flour #:ingredient{:quantity 0.2222222222222222},
+             :water #:ingredient{:quantity 0.5, :notes "Boiling water."}},
+            :ingredient-list [:flour :water]},
+           :main-dough
+           #:recipe{:name "Main Dough",
+                    :ingredients
+                    {:flour #:ingredient{:quantity 0.7777777777777778},
+                     :water #:ingredient{:quantity 0.5},
+                     :yeast
+                     #:ingredient{:options
+                                  [:instant-yeast
+                                   :active-dry-yeast
+                                   :fresh-yeast]},
+                     :sugar #:ingredient{:optional? true}},
+                    :ingredient-list
+                    [:flour :water :yeast :sugar :oil :egg-yolks :salt]}},
+          :part-list [:yudane :main-dough],
+          :steps
+          [#:step{:instructions
+                  "Make the yudane. Combine the flour and boiling water. Mix until there is no dry flour left. Leave to cool down completely. If your kitchen is quite warm you can refrigerate the yudane to help control the final dough temperature. You can also make it a day ahead of time and keep it in the fridge until you need it."}
+           #:step{:instructions
+                  "Make the dough. In a large bowl combine all the ingredients except the remaining flour. Mix well. Add the flour and mix to a dough."}
+           #:step{:instructions
+                  "Tip the dough out on the table and knead it for 6 minutes. It will be extremely sticky, so stop every now and then and scrape it together. The stickiness comes from the ingredients used. Egg yolks, sugar, and the oil all make the dough stickier. Combine those with whole wheat flour and you are going to get a stickier than normal dough. If you have a mixer – use it! *Desired dough temperature 25C (77F). If your dough is warmer, then it will ferment more rapidly. If it is cooler, then it will take longer. Adjust proofing time accordingly.",
+                  :duration 360}
+           #:step{:instructions "Cover and ferment for 1 hour.",
+                  :duration 3600}
+           #:step{:instructions "Fold."}
+           #:step{:instructions "Ferment for 1 more hour.", :duration 3600}
+           #:step{:instructions
+                  "Divide the dough into 4 equal pieces and pre-shape. You can divide it into two if you want or even leave it whole. The design is up to you."}
+           #:step{:instructions "Leave to rest for 15 minutes.", :duration 900}
+           #:step{:instructions
+                  "Perform the final shaping and place the dough in a bread tin."}
+           #:step{:instructions
+                  "Cover and final proof for 1.5 hours or until well puffed up. *During the final hour of fermentation preheat your oven to 160C (320F) fan on.",
+                  :duration 5400}
+           #:step{:instructions
+                  "Brush the loaf with egg and bake it for 40 minutes.",
+                  :duration 2400}],
+          :notes
+          "The flour I use has a protein content of 13%. If your flour is weaker, then you may need to lower the hydration.\n\n  If you are using active dry yeast, then you may need to let it sit in the water for 10 minutes before adding the other ingredients or else it could take a lot longer to raise the dough.\n\n  If you are curious about why the dough contains oil, egg, and sugar, click the links to learn more about the effects those ingredients have on bread dough."}}
